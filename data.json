@@ -1,0 +1,45 @@
+{
+  "calendario": [
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "16/03/2023",
+      "enumero": "Septuagésimo quinto día del 2023",
+      "frase": "En la vida tenemos que ir viendo la zanahoria que cuelga del palo delante nuestra, por lo contrario, estamos perdidos (Frase de paciente)",
+      "santo": "Ss. Hilario (ob.) y Taciano; Papas; Julián: mrs. Eusebia: absa. Heriberto: ob.",
+      "celebracion": "Día nacional del Oso Panda<br>Día Mundial del Trabajo Social",
+      "imagen": "75"
+    },
+    {
+      "date": "17/03/2023",
+      "enumero": "Septuagésimo sexto día del 2023",
+      "frase": "Todos estamos locos ante los ojos de la Macarena (La Femme)",
+      "santo": "Ss. Patricio; Agrícola de Châlons: obs. Gertrudis: absa. Pablo de Chipre (mj.); Juan Sarkander (pb.): mrs. Bto. Juan Nepomuceno Zegrí..",
+      "celebracion": "Día Mundial del Submarino",
+      "imagen": "76"
+    },
+    {
+      "date": "18/03/2023",
+      "enumero": "Septuagésimo séptimo día del 2023",
+      "frase": "Pero a mí no me importa porque yo no soy de Algorta (Dependiente del Koopera, cantando sólo)",
+      "santo": "Ss. Cirilo de Jerusalén: ob. y dr. Alejandro deJerusalén (mr.); Frigidiano; Braulio; Anselmo de Lucca: obs. Leobardo. Eduardo de Inglaterra. Salvador de Horta: rI",
+      "celebracion": "Día Mundial del Síndrome de Edwards o Trisomía 18<br>Día Mundial del Sueño",
+      "imagen": "77"
+    },
+
+    {
+      "date": "19/03/2023",
+      "enumero": "Septuagésimo octavo día del 2023",
+      "frase": "Hacer skate es como bailar. La única ley que existe es la de la gravedad (Tronis)",
+      "santo": "Ss. Juan de Parrano: ab. Btos. Isnardo de Chiampo; Andrés Gallerani; Sibilina Biscossi; Marcos de Marchio; Narciso Turchan; Marcelo Callo",
+      "celebracion": "Día del Padre<br>Día Internacional del Artesano",
+      "imagen": "78"
+    }
+  ]
+}
