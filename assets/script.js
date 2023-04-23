@@ -88,22 +88,22 @@ function appendData(data) {
 }
 
 
-// let inactivityTime = function () {
-//     let time;
-//     window.onload = resetTimer;
-//     document.onmousemove = resetTimer;
-//     document.touchstart = resetTimer;
-//     var $imagen = document.querySelector(".imagen");
+let inactivityTime = function () {
+    let time;
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.touchstart = resetTimer;
+    var $imagen = document.querySelector(".imagen");
 
-//     function logout() {
-//         $imagen.classList.add("showImage");
-//     }
-//     function resetTimer() {
-//         clearTimeout(time);
-//         $imagen.classList.remove("showImage");
-//         time = setTimeout(logout, 10000)
-//     }
-// };
+    function logout() {
+        $imagen.classList.add("showImage");
+    }
+    function resetTimer() {
+        clearTimeout(time);
+        $imagen.classList.remove("showImage");
+        time = setTimeout(logout, 10000)
+    }
+};
 
 
 

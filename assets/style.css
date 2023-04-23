@@ -66,24 +66,12 @@ h2 {
      width: 15vmin;
      z-index: 999;
      aspect-ratio: 1/1;
+     transition: all ease-in-out .5s;
 }
 
 #esquina:hover {
-     animation: .5s ease-in-out;
-     animation-name: big;
-     animation-iteration-count: 2;
-     animation-direction: alternate;
-
-}
-
-@keyframes big {
-     0% {
-          width: 15vmin;
-     }
-
-     100% {
-          width: 30vmin;
-     }
+     width: 25vmin;
+     transition: all ease-in-out .5s;
 }
 
 
