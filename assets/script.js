@@ -1,14 +1,14 @@
 var fechaHoy = new Date().toLocaleDateString('fr-FR');
 console.log(fechaHoy)
 
+/*//////////////// DAILY INFOS /////////////*/
+var $fecha = document.getElementById("fecha");
+
 var diaHoy = new Date().toLocaleDateString('es-ES', { weekday: 'long' });
 var mesHoy = new Date().toLocaleDateString('es-ES', { month: 'long' });
 var numeroHoy = new Date().toLocaleDateString('es-ES', { day: 'numeric' });
 
-
 function diaDeHoy() {
-
-    var $fecha = document.getElementById("fecha");
 
     var mes = document.createElement("div");
     mes.className = 'mes';
@@ -27,12 +27,12 @@ function diaDeHoy() {
 
 }
 
-
+/*//////////////// DATA FETCH /////////////*/
 fetch('data.json')
     .then(function (response) {
         return response.json();
     })
-    .then(function (data) { 
+    .then(function (data) {
         appendData(data);
         diaDeHoy();
         inactivityTime();
@@ -42,10 +42,12 @@ fetch('data.json')
     });
 
 
+/*//////////////// DATA APPEND /////////////*/
 function appendData(data) {
-    
-    document.getElementById("hoyNada").style.display = ("none"); 
-    var $infos = document.getElementById("infos");
+    var $pfrase = document.getElementById("frase");
+    var $psanto = document.getElementById("santo");
+    var $pcelebracion = document.getElementById("celebracion");
+    var $pcumpleanos = document.getElementById("cumpleanos");
 
     for (var i = 0; i < data.calendario.length; i++) {
         var calendario = data.calendario[i];
@@ -54,22 +56,27 @@ function appendData(data) {
             var enumero = document.createElement("div");
             enumero.className = 'enumero';
             enumero.innerHTML = calendario.enumero;
-            $infos.appendChild(enumero);
+            $fecha.appendChild(enumero);
 
             var frase = document.createElement("div");
-            frase.className = 'frase';
+            frase.className = 'info frase';
             frase.innerHTML = calendario.frase;
-            $infos.appendChild(frase);
+            $pfrase.appendChild(frase);
 
             var santo = document.createElement("div");
-            santo.className = 'santo';
+            santo.className = 'info santo';
             santo.innerHTML = calendario.santo;
-            $infos.appendChild(santo);
+            $psanto.appendChild(santo);
 
             var celebracion = document.createElement("div");
-            celebracion.className = 'celebracion';
+            celebracion.className = 'info celebracion';
             celebracion.innerHTML = calendario.celebracion;
-            $infos.appendChild(celebracion);
+            $pcelebracion.appendChild(celebracion);
+
+            var cumpleanos = document.createElement("div");
+            cumpleanos.className = 'info cumpleanos';
+            cumpleanos.innerHTML = calendario.cumpleanos;
+            $pcumpleanos.appendChild(cumpleanos);
 
             var imagen = document.createElement("img");
             imagen.className = 'imagen';
@@ -81,19 +88,65 @@ function appendData(data) {
 }
 
 
-let inactivityTime = function() {
-    let time;
-    window.onload = resetTimer;
-    document.onmousemove = resetTimer;
-    document.touchstart = resetTimer;
-    var $imagen = document.querySelector(".imagen");
+// let inactivityTime = function () {
+//     let time;
+//     window.onload = resetTimer;
+//     document.onmousemove = resetTimer;
+//     document.touchstart = resetTimer;
+//     var $imagen = document.querySelector(".imagen");
 
-    function logout() {
-        $imagen.classList.add("showImage");
+//     function logout() {
+//         $imagen.classList.add("showImage");
+//     }
+//     function resetTimer() {
+//         clearTimeout(time);
+//         $imagen.classList.remove("showImage");
+//         time = setTimeout(logout, 10000)
+//     }
+// };
+
+
+
+/*//////////////// CHECKBOX /////////////*/
+const mensajes = document.querySelector('#mensajes');
+const mensajesBox = document.querySelector('#mensajesBox');
+const mensajesText = document.querySelector('#mensajesInput');
+mensajesText.style.display = 'none';
+const cumpleanos = document.querySelector('#cumpleanos');
+const cumpleanosBox = document.querySelector('#cumpleanosBox');
+const cumpleanosText = document.querySelector('#cumpleanosInput');
+cumpleanosText.style.display = 'none';
+
+
+mensajes.addEventListener('change', () => {
+    if (mensajes.checked) {
+        mensajesText.style.display = 'block';
+        mensajesText.value = '';
+        mensajesBox.classList.add ("checked");
+        cumpleanosBox.classList.remove ("checked");
+        cumpleanosText.style.display = 'none';
+        cumpleanos.checked = false;
+    } else {
+        mensajesText.style.display = 'none';
+        mensajesBox.classList.remove ("checked");
     }
-    function resetTimer() {
-      clearTimeout(time);
-      $imagen.classList.remove("showImage");
-      time = setTimeout(logout, 5000)
+});''
+
+cumpleanos.addEventListener('change', () => {
+    if (cumpleanos.checked) {
+        cumpleanosText.style.display = 'block';
+        cumpleanosText.value = '';
+        cumpleanosBox.classList.add ("checked");
+        mensajesBox.classList.remove ("checked");
+        
+        mensajesText.style.display = 'none';
+        mensajes.checked = false;
+
+    } else {
+        cumpleanosText.style.display = 'none';
+        cumpleanosBox.classList.remove ("checked");
+
     }
-  };
+});
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,34 @@
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
 
     <div class="content">
-        <div id="fecha"></div>
+        <div id="fecha">
+        </div>
+
         <div id="infos">
-            <span id="hoyNada">Hoy no pasa nada</span>
+            <span id="arriba"></span>
+            <p id="santo"><span>🔖 Santos de hoy</span></p>
+            <p id="frase"><span>🥠 Mensajes del día</span></p>
+            <p id="celebracion"><span>👤 Celebraciónes de hoy</span></p>
+            <p id="cumpleanos"><span>🎂 Cumpleaños hoy</span></p>
+        </div>
+        <div class="menu">
+            <a class="block" id="msanto" href="#arriba">🔖</a>
+            <a class="block" id="mfrase" href="#frase">🥠</a>
+            <a class="block" id="mcelebracion" href="#celebracion">👤</a>
+            <a class="block" id="mcumpleanos" href="#cumpleanos">🎂</a>
         </div>
     </div>
 
+    <a href="infos.html">
+        <img src="assets/corner.png" id="esquina">
+    </a>
+
     <script id="script" src="assets/script.js"></script>
-    
+
 </body>
+
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALENDARIE 2023 > INFOS</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <div class="content-info">
+        <div class="block1">
+            <h2>🌐 Información</h2>
+            <p>Proyecto imaginado por Irene Cienfuegos, con una versión papel que salió el primer día del año. Derivado
+                a esta versión web por Pablo Moreno, que sale a la luz el primer día de mayo. </p>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success">
+            <h3>Enviar un nuevo mensaje</h3>
+            <div style="display:none">
+                <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+            </div>
+            <div class="ticks ">
+                <h4>Que es?</h4>
+                <div class="two-column">
+                <label id="mensajesBox">
+                    <input type="checkbox" id="mensajes" name="checkbox" value="mensajes" style="display:none" />
+                    🥠 Mensajes
+                </label>
+                <label id="cumpleanosBox">
+                    <input type="checkbox" id="cumpleanos" name="checkbox" value="other" style="display:none" />
+                    🎂 Cumpleaños
+                </label>
+            </div>
+
+                <input type="text" id="mensajesInput" name="mensajesInput" placeholder="Escribe tu mensaje..." class="input"/>
+                <input type="text" id="cumpleanosInput" name="cumpleanosInput"
+                    placeholder="De quién es el cumpleaños?" class="input"/>
+            </div>
+
+            <div class="fecha">
+                <h4>Cuando es?</h4>
+
+                <div>
+                    <select name="Day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="Month">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option selected value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <h4>Estás segur@?</h4>
+
+                <button type="submit" id="send">Enviar</button>
+            </div>
+    </div>
+    </form>
+
+
+    </div>
+
+    <a href="index.html">
+        <img src="assets/corner.png" alt="La esquina del calendario" id="esquina">
+    </a>
+
+    <script id="script" src="assets/script.js"></script>
+
+</body>
+
+</html>
