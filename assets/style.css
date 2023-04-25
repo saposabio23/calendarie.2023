@@ -1,9 +1,11 @@
 :root {
+
      --radius-hard: 10px;
      --radius-soft: 20px;
      --spacing-s: 10px;
      --spacing-m: 20px;
      --spacing-l: 30px;
+     --spacing-xl: 40px;
 
      --grey: #EDEDED;
      --grey-dark: rgba(0, 0, 0, 0.15);
@@ -32,25 +34,21 @@ h2 {
      text-align: center;
 }
 
-
-#infos>p {
-     margin: 0 0 var(--spacing-m) 0;
-     padding-top: var(--spacing-m);
+h3 {
+     margin: 0;
 }
 
-#infos>p>span {
-     font-weight: 600;
+h4 {
+     margin: 0 0 var(--spacing-s) 0;
+     font-weight: 400;
 }
 
-#santo {
-     padding-top: 0 !important;
-}
 
 .content {
      z-index: 1;
      position: relative;
      padding: calc(var(--spacing-l)*1) var(--spacing-l) var(--spacing-l) var(--spacing-l);
-     height: 100vh;
+     height: calc(var(--vh, 1vh) * 100);
      box-sizing: border-box;
      background-color: white;
      display: flex;
@@ -61,7 +59,7 @@ h2 {
 
 #esquina {
      position: fixed;
-     top: 0;
+     bottom: 0;
      right: 0;
      width: 15vmin;
      z-index: 999;
@@ -80,7 +78,7 @@ h2 {
 .imagen {
      opacity: 0;
      position: fixed;
-     height: 100vh;
+     height: calc(var(--vh, 1vh) * 100);
      width: 100vw;
      top: 0;
      left: 0;
@@ -105,15 +103,22 @@ h2 {
      align-items: center;
      justify-content: center;
      box-sizing: border-box;
-     /* max-height: 35vh; */
+     width: 100%;
+
+     padding: var(--spacing-m) var(--spacing-xl);
+     box-sizing: border-box;
+     border-radius: var(--radius-soft);
+     background-color: var(--grey);
+     box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .enumero {
-     font-size: 0.9rem;
+     font-size: 0.8rem;
      text-transform: capitalize;
      font-weight: 600;
      line-height: 1;
-     margin-bottom: var(--spacing-m);
+     margin-bottom: var(--spacing-s);
+     text-align: center;
 }
 
 .mes {
@@ -130,26 +135,40 @@ h2 {
      line-height: .8;
 }
 
-
 .dia {
      font-size: 2rem;
      text-transform: capitalize;
      font-weight: 600;
 }
 
-/*//////////////// DATA INFI /////////////*/
+/*//////////////// DATA INFO /////////////*/
 
 #infos {
-     background-color: var(--grey);
-     padding: var(--spacing-m);
-     box-sizing: border-box;
      overflow-y: scroll;
-     border-radius: var(--radius-soft);
      margin: calc(var(--spacing-l)*1) 0 calc(var(--spacing-m)*2) 0;
      max-width: 400px;
      scroll-behavior: smooth;
 
-     box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+     /* border: 1px solid purple; */
+     height: inherit;
+
+     scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+
+#infos > div {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     flex-direction: column;
+     text-align: center;
+}
+
+#infos > div > span {
+     font-weight: 600;
+     margin-bottom: var(--spacing-s);
 }
 
 
@@ -201,7 +220,6 @@ h2 {
      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 .block {
      background-color: var(--grey);
      padding: 10px 24px;
@@ -230,35 +248,30 @@ h2 {
      z-index: 1;
      position: relative;
      padding: calc(var(--spacing-l)*1) var(--spacing-l) var(--spacing-l) var(--spacing-l);
-     height: 100vh;
+     height: fit-content;
      box-sizing: border-box;
      background-color: white;
      display: flex;
      flex-direction: column;
      align-items: center;
+
 }
 
-.block1 {
+.credits {
      width: 100%;
-}
-
-h3 {
-     margin: 0;
+     background-color: var(--grey);
+     box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+     padding: var(--spacing-m);
+     box-sizing: border-box;
+     border-radius: var(--radius-soft);
+     margin: 0 0 calc(var(--spacing-m)*2) 0;
 }
 
 form {
-     background-color: var(--grey);
-     padding: var(--spacing-m);
-     box-sizing: border-box;
-     overflow-y: scroll;
-     border-radius: var(--radius-soft);
-     max-width: 400px;
      scroll-behavior: smooth;
-
      display: flex;
      flex-direction: column;
      row-gap: var(--spacing-m);
-     box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 form textarea {
@@ -283,11 +296,9 @@ label {
      border-radius: var(--radius-hard);
      text-align: center;
      background-color: white;
+     font-weight: 600;
 }
 
-.checked{
-     background-color: #fff5c1;
-}
 
 select {
      border: 1px solid var(--grey-dark);
@@ -295,7 +306,8 @@ select {
      border-radius: var(--radius-hard);
      text-align: center;
      background-color: white;
-   }
+     font-weight: 600;
+}
 
 textarea {
      resize: none;
@@ -309,22 +321,30 @@ textarea {
      box-sizing: border-box;
      border-radius: var(--radius-hard);
      border: 1px solid var(--grey-dark);
-
+     font-weight: 600;
 }
 
-#send{
+.checked1, #mensajesInput {
+     box-shadow: inset 0px 0px 20px gold;
+}
+
+.checked2, #cumpleanosInput {
+     box-shadow: inset 0px 0px 20px lightskyblue;
+}
+
+.checked3 {
+     box-shadow: inset 0px 0px 20px lightcoral;
+}
+
+
+#send {
      width: 100%;
      border: 1px solid var(--grey-dark);
      padding: var(--spacing-s);
      border-radius: var(--radius-hard);
      text-align: center;
+     box-shadow: inset 0px 0px 20px greenyellow;
+
      background-color: white;
+     font-weight: 600;
 }
-
-h4 {
-     margin: 0 0 var(--spacing-s) 0;
-}
-
-#mensaje:checked {
-     content: "😩";
- }

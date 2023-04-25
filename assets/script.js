@@ -1,3 +1,18 @@
+/* -----------------------------------
+IPHONE HEIGHT
+-------------------------------------- */
+window.onload = mobileWindow();
+
+function mobileWindow() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  console.log("VH on mobiles", vh);
+}
+
+window.addEventListener("resize", mobileWindow, false);
+window.addEventListener("orientationchange", mobileWindow, false);
+
+
 var fechaHoy = new Date().toLocaleDateString('fr-FR');
 console.log(fechaHoy)
 
@@ -88,6 +103,9 @@ function appendData(data) {
 }
 
 
+/* -----------------------------------
+IMAGE INACTIVE
+-------------------------------------- */
 let inactivityTime = function () {
     let time;
     window.onload = resetTimer;
@@ -111,42 +129,52 @@ let inactivityTime = function () {
 const mensajes = document.querySelector('#mensajes');
 const mensajesBox = document.querySelector('#mensajesBox');
 const mensajesText = document.querySelector('#mensajesInput');
-mensajesText.style.display = 'none';
 const cumpleanos = document.querySelector('#cumpleanos');
 const cumpleanosBox = document.querySelector('#cumpleanosBox');
 const cumpleanosText = document.querySelector('#cumpleanosInput');
-cumpleanosText.style.display = 'none';
+
+const selectDay = document.querySelector('#selectDay');
+const selectMonth = document.querySelector('#selectMonth');
+
 
 
 mensajes.addEventListener('change', () => {
     if (mensajes.checked) {
         mensajesText.style.display = 'block';
         mensajesText.value = '';
-        mensajesBox.classList.add ("checked");
-        cumpleanosBox.classList.remove ("checked");
+        mensajesBox.classList.add ("checked1");
+        cumpleanosBox.classList.remove ("checked2");
         cumpleanosText.style.display = 'none';
         cumpleanos.checked = false;
     } else {
         mensajesText.style.display = 'none';
-        mensajesBox.classList.remove ("checked");
+        mensajesBox.classList.remove ("checked1");
     }
-});''
+});
 
 cumpleanos.addEventListener('change', () => {
     if (cumpleanos.checked) {
         cumpleanosText.style.display = 'block';
         cumpleanosText.value = '';
-        cumpleanosBox.classList.add ("checked");
-        mensajesBox.classList.remove ("checked");
+        cumpleanosBox.classList.add ("checked2");
+        mensajesBox.classList.remove ("checked1");
         
         mensajesText.style.display = 'none';
         mensajes.checked = false;
 
     } else {
         cumpleanosText.style.display = 'none';
-        cumpleanosBox.classList.remove ("checked");
+        cumpleanosBox.classList.remove ("checked2");
 
     }
+});
+
+selectDay.addEventListener('change', () => {
+    selectDay.classList.add ("checked3");
+});
+
+selectMonth.addEventListener('change', () => {
+    selectMonth.classList.add ("checked3");
 });
 
 function disableEmptyInputs(form) {
