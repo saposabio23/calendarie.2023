@@ -145,8 +145,8 @@ h4 {
 
 #infos {
      overflow-y: scroll;
-     margin: calc(var(--spacing-l)*1) 0 calc(var(--spacing-m)*2) 0;
-     max-width: 400px;
+     margin: calc(var(--spacing-l)*1) 5% calc(var(--spacing-m)*2) 5%;
+     width: 90%;
      scroll-behavior: smooth;
 
      /* border: 1px solid purple; */
@@ -272,11 +272,10 @@ form {
      display: flex;
      flex-direction: column;
      row-gap: var(--spacing-m);
+     margin:0 5% 0 5%;
+     width: 90%;
 }
 
-form textarea {
-     width: 100%;
-}
 
 .fecha div {
      display: grid;
@@ -309,15 +308,11 @@ select {
      font-weight: 600;
 }
 
-textarea {
-     resize: none;
-     overflow: auto;
-}
 
 .input {
      width: 100%;
      margin-top: var(--spacing-s);
-     padding: var(--spacing-s);
+     padding: var(--spacing-m);
      box-sizing: border-box;
      border-radius: var(--radius-hard);
      border: 1px solid var(--grey-dark);
@@ -340,7 +335,7 @@ textarea {
 #send {
      width: 100%;
      border: 1px solid var(--grey-dark);
-     padding: var(--spacing-s);
+     padding: var(--spacing-m);
      border-radius: var(--radius-hard);
      text-align: center;
      box-shadow: inset 0px 0px 20px greenyellow;
