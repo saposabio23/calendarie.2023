@@ -106,30 +106,42 @@ function appendData(data) {
 /* -----------------------------------
 IMAGE INACTIVE
 -------------------------------------- */
-let inactivityTime = function () {
-    let time;
-    window.onload = resetTimer;
-    document.onmousemove = resetTimer;
-    document.touchstart = resetTimer;
-    var $imagen = document.querySelector(".imagen");
+// let inactivityTime = function () {
+//     let time;
+//     window.onload = resetTimer;
+//     document.onmousemove = resetTimer;
+//     document.touchstart = resetTimer;
+//     var $imagen = document.querySelector(".imagen");
 
-    function logout() {
-        $imagen.classList.add("showImage");
-    }
-    function resetTimer() {
-        clearTimeout(time);
-        $imagen.classList.remove("showImage");
-        time = setTimeout(logout, 10000)
-    }
-};
+//     function logout() {
+//         $imagen.classList.add("showImage");
+//     }
+//     function resetTimer() {
+//         clearTimeout(time);
+//         $imagen.classList.remove("showImage");
+//         time = setTimeout(logout, 10000)
+//     }
+// };
+
+
+/*//////////////// INFOS /////////////*/
+const corner = document.querySelector('#esquina');
+const content = document.querySelector('.content');
+
+
+function showInfo() {
+    content.classList.toggle ("shows");
+  }
+
+  corner.addEventListener("click", showInfo, false);
 
 
 
 /*//////////////// CHECKBOX /////////////*/
-const mensajes = document.querySelector('#mensajes');
+const mensajes = document.querySelector('#mensajesbtn');
 const mensajesBox = document.querySelector('#mensajesBox');
 const mensajesText = document.querySelector('#mensajesInput');
-const cumpleanos = document.querySelector('#cumpleanos');
+const cumpleanos = document.querySelector('#cumpleanosbtn');
 const cumpleanosBox = document.querySelector('#cumpleanosBox');
 const cumpleanosText = document.querySelector('#cumpleanosInput');
 
@@ -158,7 +170,6 @@ cumpleanos.addEventListener('change', () => {
         cumpleanosText.value = '';
         cumpleanosBox.classList.add ("checked2");
         mensajesBox.classList.remove ("checked1");
-        
         mensajesText.style.display = 'none';
         mensajes.checked = false;
 
@@ -169,19 +180,10 @@ cumpleanos.addEventListener('change', () => {
     }
 });
 
-selectDay.addEventListener('change', () => {
+selectDay.addEventListener('click', () => {
     selectDay.classList.add ("checked3");
 });
 
-selectMonth.addEventListener('change', () => {
+selectMonth.addEventListener('click', () => {
     selectMonth.classList.add ("checked3");
 });
-
-function disableEmptyInputs(form) {
-    var controls = form.input;
-    for (var i=0, iLen=controls.length; i<iLen; i++) {
-      controls[i].disabled = controls[i].value == '';
-    }
-  }
-
-

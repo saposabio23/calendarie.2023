@@ -1,6 +1,79 @@
 {
   "calendario": [
     {
+      "date": "03/05/2023",
+      "enumero": "Primer día del 2023",
+      "frase": "En cuestión de arte, la opinión ajena debe escucharse siempre y no obedecerse nunca (Jardiel Poncela)",
+      "santo": "xxx",
+      "celebracion": "<a href='https:wiki.com'>Día de Año Nuevo</a><br><a href='https:wiki.com'>Día de Año Nuevo</a><br><a href='https:wiki.com'>Día de Año Nuevo</a>", 
+      "imagen": "23"
+    },
+
+    {
+      "date": "02/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
+      "date": "01/01/2023",
+      "enumero": "xxx",
+      "frase": "xxx",
+      "santo": "xxx",
+      "celebracion": "xxx",
+      "imagen": "xxx"
+    },
+    {
       "date": "01/01/2023",
       "enumero": "xxx",
       "frase": "xxx",
@@ -31,15 +104,6 @@
       "santo": "Ss. Cirilo de Jerusalén: ob. y dr. Alejandro deJerusalén (mr.); Frigidiano; Braulio; Anselmo de Lucca: obs. Leobardo. Eduardo de Inglaterra. Salvador de Horta: rI",
       "celebracion": "Día Mundial del Síndrome de Edwards o Trisomía 18<br>Día Mundial del Sueño",
       "imagen": "77"
-    },
-
-    {
-      "date": "25/04/2023",
-      "enumero": "Septuagésimo octavo día del 2023",
-      "frase": "Hacer skate es como bailar. La única ley que existe es la de la gravedad (Tronis)",
-      "santo": "Ss. Juan de Parrano: ab. Btos. Isnardo de Chiampo; Andrés Gallerani; Sibilina Biscossi; Marcos de Marchio; Narciso Turchan; Marcelo Callo",
-      "celebracion": "Día del Padre<br>Día Internacional del Artesano",
-      "imagen": "78"
     }
   ]
 }
