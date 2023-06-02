@@ -5,104 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALENDARIE 2023 > INFOS</title>
+    <title>INFOS</title>
 
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fonts.css">
 </head>
 
 <body>
 
     <div class="content-info">
+        <h1><a href="index.html">✦ Calendarie 2023 ✦</a></h1>
         <div class="credits">
-            <h2>✦ Calendarie 2023 ✦</h2>
-            <p>Proyecto imaginado por Irene Cienfuegos, con una versión papel que salió el primer día del año. Derivado a una versión web por Pablo Moreno, que sale a la luz el primer día de mayo. </p>
+            <p>Proyecto imaginado por <span class="author">Irene Cienfuegos</span>, con una versión papel que salió el
+                primer día del año. Derivado a una versión web por <span class="author">Pablo Moreno</span>, que sale 6
+                meses despues.
+            </p>
+            <hr>
+            <p>﹅ Tipografías open-source utilizadas: <a href="https://www.velvetyne.fr/fonts/degheest/" target="_blank"
+                    style="font-family: 'Louise';">Louise ➚</a> creada el EESAB de Rennes y la <a
+                    href="https://www.velvetyne.fr/fonts/degheest/" target="_blank"
+                    style="font-family: 'Geom';">Geom ➚</a> creada por XXX<br>
+                ﹅ El color violeta es un color CSS llamado Blueviolet<br>
+                ﹅ La web está escrita a mano y alojada en Netlify</p>
         </div>
 
-        <form name="Submissions" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success" onsubmit="disableEmptyInputs(this)">
-            <h3>Enviar un nuevo mensaje</h3>
-            <div style="display:none">
-                <label>
-                    Don’t fill this out if you’re human: <input name="bot-field" />
-                </label>
-            </div>
-            <div class="ticks ">
-                <h4>Que es?</h4>
-                <div class="two-column">
-                <label id="mensajesBox">
-                    <input type="checkbox" id="mensajes" name="checkbox" value="Mensajes" style="display:none" />
-                    🥠 Mensajes
-                </label>
-                <label id="cumpleanosBox">
-                    <input type="checkbox" id="cumpleanos" name="checkbox" value="Cumpleaños" style="display:none" />
-                    🎂 Cumpleaños
-                </label>
-            </div>
+        <div class="contact">
+            <h2>Puedes enviarnos un mensaje a:</h2>
+            <a href="https://www.instagram.com/sagesseastrale23/" class="insta rot1">⬉ @irenecienfu</a>
+            <a href="https://www.instagram.com/sagesseastrale23/" class="insta rot2">@sagesseastrale23 ➚</a>
+        </div>
 
-                <input type="text" id="mensajesInput" name="mensajesInput" placeholder="Escribe tu mensaje..." class="input" style="display:none"/>
-                <input type="text" id="cumpleanosInput" name="cumpleañosInput" placeholder="De quién es el cumpleaños?" class="input" style="display:none"/>
-            </div>
 
-            <div class="fecha">
-                <h4>Cuando es?</h4>
 
-                <div>
-                    <select name="Day" id="selectDay">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                        
-                    </select>
-                    <select name="Month" id="selectMonth">
-                        <option value="Enero">Enero</option>
-                        <option value="Febrero">Febrero</option>
-                        <option value="Marzo">Marzo</option>
-                        <option value="Abril">Abril</option>
-                        <option selected value="Mayo">Mayo</option>
-                        <option value="Junio">Junio</option>
-                        <option value="Julio">Julio</option>
-                        <option value="Agosto">Agosto</option>
-                        <option value="Septiembre">Septiembre</option>
-                        <option value="Octubre">Octubre</option>
-                        <option value="Noviembre">Noviembre</option>
-                        <option value="Diciembre">Diciembre</option>
-                    </select>
-                </div>
-            </div>
-
-            <div>
-                <h4>Estás segur@?</h4>
-
-                <button type="submit" id="send">ENVIAR</button>
-            </div>
-        </form>
     </div>
 
 
@@ -110,7 +44,7 @@
         <img src="assets/corner.png" alt="La esquina del calendario" id="esquina">
     </a>
 
-    <script id="script" src="assets/script.js"></script>
+    <script id="script" src="assets/info.js"></script>
 
 </body>
 

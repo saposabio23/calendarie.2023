@@ -1,11 +1,16 @@
 {
   "calendario": [
     {
-      "date": "03/05/2023",
+      "date": "02/06/2023",
       "enumero": "Primer día del 2023",
       "frase": "En cuestión de arte, la opinión ajena debe escucharse siempre y no obedecerse nunca (Jardiel Poncela)",
-      "santo": "xxx",
-      "celebracion": "<a href='https:wiki.com'>Día de Año Nuevo</a><br><a href='https:wiki.com'>Día de Año Nuevo</a><br><a href='https:wiki.com'>Día de Año Nuevo</a>", 
+      "santo": "Santo de don Vito",
+      "celebracion1": "Día de Año Nuevo ➚", 
+      "celebracionurl1": "https://en.wikipedia.org/wiki/Davos", 
+      "celebracion2": "", 
+      "celebracionurl2": "", 
+      "celebracion3": "", 
+      "celebracionurl3": "", 
       "imagen": "23"
     },
 

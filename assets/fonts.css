@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Geom';
+  font-style:  normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("fonts/geom/CMGeom-Regular.woff2") format("woff2"),
+       url("fonts/geom/CMGeom-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Louise';
+    font-style:  normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("fonts/degheest/Louise-Regular.woff2") format("woff2"),
+         url("fonts/degheest/Louise-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Abordage';
+    font-style:  normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("fonts/degheest/Abordage-Regular.woff") format("woff2"),
+         url("fonts/degheest/Abordage-Regular.woff") format("woff");
+  }

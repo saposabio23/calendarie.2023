@@ -8,6 +8,7 @@
     <title>CALENDARIE 2023</title>
 
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fonts.css">
 </head>
 
 <body>
@@ -17,116 +18,23 @@
         </div>
 
         <div id="infos">
-            <span id="arriba"></span>
-            <div id="santo"><span>🔖 Santos de hoy</span></div>
-            <div id="frase"><span>🥠 Mensajes del día</span></div>
-            <div id="celebracion"><span>👤 Celebraciónes de hoy</span></div>
-            <div id="cumpleanos"><span>🎂 Cumpleaños hoy</span></div>
+            <div id="nada"><span>Que se maneja hoy?</span><span>☞</span></div>
+            <div id="santo"><span>Santos de hoy</span></div>
+            <div id="frase"><span>Mensaje para hoy</span></div>
+            <div id="celebracion"><span>Celebraciones del día</span></div>
+            <div id="cumpleanos"><span>Cumpleaños hoy</span></div>
         </div>
         <div class="menu">
-            <a class="block" id="msanto" href="#arriba">🔖</a>
+            <a class="block" id="msanto" href="#santo">🔖</a>
             <a class="block" id="mfrase" href="#frase">🥠</a>
             <a class="block" id="mcelebracion" href="#celebracion">👤</a>
-            <a class="block" id="mcumpleanos" href="#cumpleanos">🎂</a>
+            <!-- <a class="block" id="mcumpleanos" href="#cumpleanos">🎂</a> -->
         </div>
     </div>
 
 
-        <img src="assets/corner.png" id="esquina">
+        <a href="infos.html"><img src="assets/corner.png" id="esquina"></a>
 
-
-    <div class="content-info">
-        <div class="credits">
-            <h2>✦ Calendarie 2023 ✦</h2>
-            <p>Proyecto imaginado por Irene Cienfuegos, con una versión papel que salió el primer día del año. Derivado a una versión web por Pablo Moreno, que sale a la luz el primer día de mayo. </p>
-        </div>
-
-        <form name="Submissions" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success" onsubmit="disableEmptyInputs(this)">
-            <h3>Enviar un nuevo mensaje</h3>
-            <div style="display:none">
-                <label>
-                    Don’t fill this out if you’re human: <input name="bot-field" />
-                </label>
-            </div>
-            <div class="ticks ">
-                <h4>Que es?</h4>
-                <div class="two-column">
-                <label id="mensajesBox">
-                    <input type="checkbox" id="mensajesbtn" name="checkbox" value="Mensajes" style="display:none" />
-                    🥠<br>Mensajes
-                </label>
-                <label id="cumpleanosBox">
-                    <input type="checkbox" id="cumpleanosbtn" name="checkbox" value="Cumpleaños" style="display:none" />
-                    🎂<br>Cumpleaños
-                </label>
-            </div>
-
-                <input type="text" id="mensajesInput" name="mensajesInput" placeholder="Escribe tu mensaje..." class="input" style="display:none"/>
-                <input type="text" id="cumpleanosInput" name="cumpleañosInput" placeholder="De quién es el cumpleaños?" class="input" style="display:none"/>
-            </div>
-
-            <div class="fecha">
-                <h4>Cuando es?</h4>
-
-                <div>
-                    <select name="Day" id="selectDay">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                        
-                    </select>
-                    <select name="Month" id="selectMonth">
-                        <option value="Enero">Enero</option>
-                        <option value="Febrero">Febrero</option>
-                        <option value="Marzo">Marzo</option>
-                        <option value="Abril">Abril</option>
-                        <option selected value="Mayo">Mayo</option>
-                        <option value="Junio">Junio</option>
-                        <option value="Julio">Julio</option>
-                        <option value="Agosto">Agosto</option>
-                        <option value="Septiembre">Septiembre</option>
-                        <option value="Octubre">Octubre</option>
-                        <option value="Noviembre">Noviembre</option>
-                        <option value="Diciembre">Diciembre</option>
-                    </select>
-                </div>
-            </div>
-
-            <div>
-                <h4>Estás segur@?</h4>
-
-                <button type="submit" id="send">ENVIAR</button>
-            </div>
-        </form>
-    </div>
 
     <script id="script" src="assets/script.js"></script>
 

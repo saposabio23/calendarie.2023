@@ -1,17 +1,3 @@
-/* -----------------------------------
-IPHONE HEIGHT
--------------------------------------- */
-window.onload = mobileWindow();
-
-function mobileWindow() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  console.log("VH on mobiles", vh);
-}
-
-window.addEventListener("resize", mobileWindow, false);
-window.addEventListener("orientationchange", mobileWindow, false);
-
 
 var fechaHoy = new Date().toLocaleDateString('fr-FR');
 console.log(fechaHoy)
@@ -24,6 +10,8 @@ var mesHoy = new Date().toLocaleDateString('es-ES', { month: 'long' });
 var numeroHoy = new Date().toLocaleDateString('es-ES', { day: 'numeric' });
 
 function diaDeHoy() {
+
+    document.title = 'Bienvenid@ al ' + numeroHoy + ' de ' + mesHoy +' de 2023!';
 
     var mes = document.createElement("div");
     mes.className = 'mes';
@@ -50,7 +38,7 @@ fetch('data.json')
     .then(function (data) {
         appendData(data);
         diaDeHoy();
-        inactivityTime();
+        // inactivityTime();
     })
     .catch(function (err) {
         console.log('error: ' + err);
@@ -59,10 +47,16 @@ fetch('data.json')
 
 /*//////////////// DATA APPEND /////////////*/
 function appendData(data) {
-    var $pfrase = document.getElementById("frase");
-    var $psanto = document.getElementById("santo");
-    var $pcelebracion = document.getElementById("celebracion");
-    var $pcumpleanos = document.getElementById("cumpleanos");
+
+    cosas = ['Que se cuece hoy?', 'Que pasa hoy?', 'Que se trama hoy?', 'Y hoy?']
+
+    const $pfrase = document.getElementById("frase");
+    const $psanto = document.getElementById("santo");
+    const $pcelebracion = document.getElementById("celebracion");
+    const $pcumpleanos = document.getElementById("cumpleanos");
+
+    const content = document.querySelector('.content');
+
 
     for (var i = 0; i < data.calendario.length; i++) {
         var calendario = data.calendario[i];
@@ -71,7 +65,7 @@ function appendData(data) {
             var enumero = document.createElement("div");
             enumero.className = 'enumero';
             enumero.innerHTML = calendario.enumero;
-            $fecha.appendChild(enumero);
+            content.prepend(enumero);
 
             var frase = document.createElement("div");
             frase.className = 'info frase';
@@ -83,10 +77,27 @@ function appendData(data) {
             santo.innerHTML = calendario.santo;
             $psanto.appendChild(santo);
 
-            var celebracion = document.createElement("div");
+            var celebracion = document.createElement("a");
             celebracion.className = 'info celebracion';
-            celebracion.innerHTML = calendario.celebracion;
+            celebracion.innerHTML = calendario.celebracion1;
+            celebracion.href = calendario.celebracionurl1;
+            celebracion.target = "_blank";
             $pcelebracion.appendChild(celebracion);
+
+
+            var celebracion2 = document.createElement("a");
+            celebracion2.className = 'info celebracion';
+            celebracion2.innerHTML = calendario.celebracion2;
+            celebracion2.href = calendario.celebracionurl2;
+            celebracion2.target = "_blank";
+            $pcelebracion.appendChild(celebracion2);
+
+            var celebracion3 = document.createElement("a");
+            celebracion3.className = 'info celebracion';
+            celebracion3.innerHTML = calendario.celebracion3;
+            celebracion3.href = calendario.celebracionurl3;
+            celebracion3.target = "_blank";
+            $pcelebracion.appendChild(celebracion3);
 
             var cumpleanos = document.createElement("div");
             cumpleanos.className = 'info cumpleanos';
@@ -101,6 +112,31 @@ function appendData(data) {
         }
     }
 }
+
+const msanto = document.querySelector('#msanto');
+const mfrase = document.querySelector('#mfrase');
+const mcelebracion = document.querySelector('#mcelebracion');
+const mcumpleanos = document.querySelector('#mcumpleanos');
+
+msanto.addEventListener('click', () => {
+    msanto.classList.add ("selected1");
+    mfrase.classList.remove ("selected2");
+    mcelebracion.classList.remove ("selected3");
+});
+
+mfrase.addEventListener('click', () => {
+    msanto.classList.remove ("selected1");
+    mfrase.classList.add ("selected2");
+    mcelebracion.classList.remove ("selected3");
+});
+
+mcelebracion.addEventListener('click', () => {
+    msanto.classList.remove ("selected1");
+    mfrase.classList.remove ("selected2");
+    mcelebracion.classList.add ("selected3");
+});
+
+
 
 
 /* -----------------------------------
@@ -124,66 +160,3 @@ IMAGE INACTIVE
 // };
 
 
-/*//////////////// INFOS /////////////*/
-const corner = document.querySelector('#esquina');
-const content = document.querySelector('.content');
-
-
-function showInfo() {
-    content.classList.toggle ("shows");
-  }
-
-  corner.addEventListener("click", showInfo, false);
-
-
-
-/*//////////////// CHECKBOX /////////////*/
-const mensajes = document.querySelector('#mensajesbtn');
-const mensajesBox = document.querySelector('#mensajesBox');
-const mensajesText = document.querySelector('#mensajesInput');
-const cumpleanos = document.querySelector('#cumpleanosbtn');
-const cumpleanosBox = document.querySelector('#cumpleanosBox');
-const cumpleanosText = document.querySelector('#cumpleanosInput');
-
-const selectDay = document.querySelector('#selectDay');
-const selectMonth = document.querySelector('#selectMonth');
-
-
-
-mensajes.addEventListener('change', () => {
-    if (mensajes.checked) {
-        mensajesText.style.display = 'block';
-        mensajesText.value = '';
-        mensajesBox.classList.add ("checked1");
-        cumpleanosBox.classList.remove ("checked2");
-        cumpleanosText.style.display = 'none';
-        cumpleanos.checked = false;
-    } else {
-        mensajesText.style.display = 'none';
-        mensajesBox.classList.remove ("checked1");
-    }
-});
-
-cumpleanos.addEventListener('change', () => {
-    if (cumpleanos.checked) {
-        cumpleanosText.style.display = 'block';
-        cumpleanosText.value = '';
-        cumpleanosBox.classList.add ("checked2");
-        mensajesBox.classList.remove ("checked1");
-        mensajesText.style.display = 'none';
-        mensajes.checked = false;
-
-    } else {
-        cumpleanosText.style.display = 'none';
-        cumpleanosBox.classList.remove ("checked2");
-
-    }
-});
-
-selectDay.addEventListener('click', () => {
-    selectDay.classList.add ("checked3");
-});
-
-selectMonth.addEventListener('click', () => {
-    selectMonth.classList.add ("checked3");
-});
