@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Latitude';
+    font-style:  normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../fonts/degheest/Latitude-Regular.woff2") format("woff2"),
+         url("../fonts/degheest/Latitude-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Abordage';
+    font-style:  normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../fonts/degheest/Abordage-Regular.woff") format("woff2"),
+         url("../fonts/degheest/Abordage-Regular.woff") format("woff");
+  }

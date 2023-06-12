@@ -1,4 +1,30 @@
-- random "que se cuence hoy?
-- a que hora se levanta y acuesta el sol?
-- noche y dia templat
-- fondo ruido
+- noche y dia template 
+
+- rellenar CSV
+
+-favicon
+
+
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Pablo Moreno">
+    <meta name="description"
+        content="Réalisations de virtualisations d'architecture (montages, parcours 360º, images de haute qualité)">
+    <meta name="author" content="Pablo Moreno">
+    <link rel="canonical" href="https://pablo-archi.online">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pablo-archi.online">
+    <meta property="og:title" content="Pablo Moreno">
+    <meta property="og:description"
+        content="Réalisation de virtualisations d'architecture (montages, parcours 360º, images de haute qualité)">
+    <meta property="og:image" content="assets/favicon/favicon-32x32.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://pablo-archi.online">
+    <meta property="twitter:title" content="Pablo Moreno">
+    <meta property="twitter:description"
+        content="Réalisation de virtualisations d'architecture (Vidéos, Parcours 360º, Images fixes)">
+    <meta property="twitter:image" content="assets/favicon/favicon-32x32.png">

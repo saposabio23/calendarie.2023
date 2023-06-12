@@ -1,6 +1,0 @@
-
-- font-size
-- color botones
-
-- remplir JSON
-- textossss
