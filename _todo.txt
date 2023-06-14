@@ -1,7 +1,5 @@
 - noche y dia template 
 
-- rellenar CSV
-
 -favicon
 
 
