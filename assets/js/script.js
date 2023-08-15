@@ -9,7 +9,7 @@ var numeroHoy = new Date().toLocaleDateString('es-ES', { day: 'numeric' });
 
 
 function diaDeHoy() {
-    document.title = 'Feliz ' + numeroHoy + ' de ' + mesHoy + ' de 2023 !';
+    document.title = 'Feliz ' + numeroHoy + ' de ' + mesHoy + '!';
 
     var mes = document.createElement("div");
     mes.className = 'mes';
