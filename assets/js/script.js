@@ -177,13 +177,6 @@ let inactivityTime = function () {
     function resetTimer() {
         clearTimeout(time);
         $imagen.classList.remove("showImage");
-        time = setTimeout(logout, 4000)
+        time = setTimeout(logout, 7000)
     }
 };
-
-const enumero = document.querySelector('.enumero');
-
-enumero.onclick = function () {
-    location.href = "";
-};
-

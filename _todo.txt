@@ -1,9 +1,5 @@
 - noche y dia template 
 
--favicon
-
-
-
     <!-- Primary Meta Tags -->
     <meta name="title" content="Pablo Moreno">
     <meta name="description"

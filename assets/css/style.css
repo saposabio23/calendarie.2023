@@ -7,9 +7,17 @@
      --spacing-l: 30px;
      --spacing-xl: 40px;
 
-     --grey: #EDEDED;
      --grey-dark: rgba(0, 0, 0, 0.08);
      --transparent: rgba(220, 220, 220, 0.5);
+     
+     --color-violet: blueviolet;
+     --color-lightgrey: #EDEDED;
+     --color-grey: slategrey;
+
+     --color-white: white;
+     --color-black: black;
+
+     --color-texto: black;
 }
 
 html {
@@ -20,7 +28,7 @@ body {
      font-family: sans-serif;
      margin: 0;
      top: 0;
-     background-color: black;
+     background-color: var(--color-black);
 
      font-family: 'Abordage';
 
@@ -28,15 +36,15 @@ body {
 
 a,
 a:visited {
-     color: blueviolet;
+     color: var(--color-violet);
      text-decoration: underline dotted;
-     text-decoration-color: blueviolet;
+     text-decoration-color: var(--color-violet);
      transition: all .3s ease-in-out;
 }
 
 
 a:hover {
-     text-decoration-color: blueviolet;
+     text-decoration-color: var(--color-violet);
      transition: all .3s ease-in-out;
      text-decoration: none;
 
@@ -46,8 +54,8 @@ h1 {
      margin: 0 0 var(--spacing-m)0;
      text-align: center;
      font-family: 'Latitude';
-     color: blueviolet;
-     border: 2px dotted blueviolet;
+     color: var(--color-violet);
+     border: 2px dotted var(--color-violet);
      padding: var(--spacing-m);
      border-radius: 50px;
      box-shadow: inset 0px 0px 20px #8a2be285;
@@ -73,7 +81,7 @@ h1 > a {
 
 h2 {
      margin: 0;
-     color: slategrey;
+     color: var(--color-grey);
      font-weight: 400;
      font-size: 1.1rem;
 }
@@ -90,7 +98,7 @@ h2 {
      padding: var(--spacing-m) var(--spacing-l) var(--spacing-xl) var(--spacing-l);
      height: 100dvh;
      box-sizing: border-box;
-     background-color: white;
+     background-color: var(--color-white);
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -159,7 +167,7 @@ h2 {
 
      margin: 0 var(--spacing-xl) 0 var(--spacing-xl);
 
-     background-color: var(--grey);
+     background-color: var(--color-lightgrey);
      box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
      border-radius: var(--radius-soft);
      padding: var(--spacing-m);
@@ -167,7 +175,7 @@ h2 {
 
      max-width: 400px;
 
-
+     color: var(--color-texto);
 
 }
 
@@ -178,12 +186,12 @@ h2 {
      line-height: 1;
      margin-bottom: var(--spacing-m);
      text-align: center;
-     border: 1px dotted blueviolet;
+     border: 1px dotted var(--color-violet);
      padding: 6px 8px 4px 8px;
      border-radius: 50px;
-     color: blueviolet;
+     color: var(--color-violet);
      opacity: 1;
-     box-shadow: inset 0px 0px 7px #8a2be285;
+     box-shadow: inset 0px 0px 7px var(--color-violet);
 
      font-family: 'Latitude';
      text-decoration: none;
@@ -230,6 +238,8 @@ h2 {
      font-size: 1.3rem;
      max-width: 500px;
 
+     color: var(--color-texto);
+
 
 }
 
@@ -250,7 +260,7 @@ h2 {
      font-weight: 600;
      font-family: 'Latitude';
      margin-bottom: var(--spacing-s);
-     color: blueviolet;
+     color: var(--color-violet);
 }
 
 #nada span {
@@ -269,7 +279,7 @@ h2 {
 .autore {
      margin-top: var(--spacing-s);
      font-size: 90%;
-     color: black;
+     color: var(--color-grey);
 
      text-decoration: none !important;
 
@@ -281,7 +291,7 @@ h2 {
 
 .url {
      text-decoration: dotted !important;
-     color: blueviolet;
+     color: var(--color-violet);
 }
 
 
@@ -292,7 +302,7 @@ h2 {
      left: 50%;
      transform: translate(-50%, calc(-100% - var(--spacing-s)));
      width: 80vw;
-     background-color: var(--grey);
+     background-color: var(--color-lightgrey);
      padding: var(--spacing-s);
      border-radius: var(--radius-hard);
      z-index: 99;
@@ -340,7 +350,7 @@ h2 {
 }
 
 .block {
-     background-color: var(--grey);
+     background-color: var(--color-lightgrey);
      padding: 10px 24px;
      transition: all .3s ease-in-out;
      border-right: 1px solid var(--grey-dark);
@@ -358,19 +368,19 @@ h2 {
 
 .block:nth-child(1):hover,
 .selected1 {
-     box-shadow: inset 0px 0px 20px slategray;
+     box-shadow: inset 0px 0px 20px var(--color-grey);
      transition: all .3s ease-in-out;
 }
 
 .block:nth-child(2):hover,
 .selected2 {
-     box-shadow: inset 0px 0px 20px slategray;
+     box-shadow: inset 0px 0px 20px var(--color-grey);
      transition: all .3s ease-in-out;
 }
 
 .block:nth-child(3):hover,
 .selected3 {
-     box-shadow: inset 0px 0px 20px slategray;
+     box-shadow: inset 0px 0px 20px var(--color-grey);
      transition: all .3s ease-in-out;
 }
 
@@ -383,7 +393,7 @@ h2 {
      padding: var(--spacing-m) var(--spacing-l) var(--spacing-xl) var(--spacing-l);
      height: fit-content;
      box-sizing: border-box;
-     background-color: white;
+     background-color: var(--color-white);
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -400,10 +410,10 @@ h2 {
 
 .insta {
      text-align: center;
-     border: 1px dotted blueviolet;
+     border: 1px dotted var(--color-violet);
      padding: var(--spacing-m);
      border-radius: 100%;
-     color: blueviolet;
+     color: var(--color-violet);
      opacity: 1;
      transition: all .3s ease-in-out;
 
@@ -426,7 +436,7 @@ h2 {
      padding: var(--spacing-m);
      box-sizing: border-box;
      border-radius: var(--radius-soft);
-     background-color: var(--grey);
+     background-color: var(--color-lightgrey);
      box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
      /* height: 190px;
      overflow-y: scroll; */
@@ -440,20 +450,21 @@ h2 {
      margin: 0 0 var(--spacing-s) 0;
      font-weight: 600;
      line-height: 1.2;
+
+     color: var(--color-texto);
 }
 
 hr {
-     border-top: 2px dashed slategray;
+     border-top: 2px dashed var(--color-grey);
      border-bottom: 0;
      margin: var(--spacing-m) 0 var(--spacing-s) 0;
 }
 
 .credits p:nth-child(2) {
-     font-size: 80%;
      margin: 0;
      font-weight: 400;
      line-height: 1.2;
-     color: slategray;
+     color: var(--color-grey);
 }
 
 .contact {
@@ -467,7 +478,7 @@ hr {
 
 .insta:hover,
 .insta:active {
-     box-shadow: inset 0px 0px 20px #8a2be285;
+     box-shadow: inset 0px 0px 20px var(--color-violet);
      transition: all .3s ease-in-out;
      text-decoration: none;
 
@@ -476,6 +487,6 @@ hr {
 #update {
      position: absolute;
      bottom: var(--spacing-l);
-     font-size: 70%;
-     color: slategray;
+     font-size: 90%;
+     color: var(--color-grey);
 }
